@@ -1,0 +1,9 @@
+export const ALL_POKEMONS = "ALL_POKEMONS";
+export const ALL_TYPES = "ALL_TYPES";
+export const POKEMONS_ID = "POKEMONS_ID";
+export const POKEMONS_NAME = "POKEMONS_NAME";
+export const ADD_POKEMON = "ADD_POKEMON";
+export const BACK = "BACK";
+export const FILTER_BY_TYPE = "FILTER_BY_TYPE";
+export const FILTER_BY_APIDB = "FILTER_BY_APIDB";
+export const ORDER_BY_NAME_OR_ATTACK = "ORDER_BY_NAME_OR_ATTACK";

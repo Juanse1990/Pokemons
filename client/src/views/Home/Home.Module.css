@@ -1,0 +1,52 @@
+.pokeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 305px);
+  gap: 30px;
+  padding: 10px;
+  justify-content: center;
+}
+
+/* .selects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 0px;
+  margin: 1px 1px 1px 1px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.selects select option {
+  background: black;
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+}
+
+select {
+  cursor: pointer;
+  box-shadow: white;
+   background: black;
+  border: 2px solid black;
+  width: 6%;
+  height: 4%;
+  font-size: 0.6em;
+  padding-top: 1em;
+  padding-right: 4rem;
+  padding-bottom: 1em;
+  padding-left: 0.2rem;
+  margin: 0.8rem;
+  margin-left: 1rem;
+  margin-right: 2rem;
+  border-radius: 20px;
+  outline: none;
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+}
+
+select option {
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.selects select:hover {
+  box-shadow: 0 2px 8px -1px white;
+} */

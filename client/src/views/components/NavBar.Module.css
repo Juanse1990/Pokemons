@@ -1,0 +1,38 @@
+.buttonNav {
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  border: none;
+  width: 100%;
+  height: 60%;
+  border-radius: 1rem;
+  color: white;
+  background: #1f9260;
+  box-shadow: 0 2px 8px -1px rgb(219, 209, 209);
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.5s ease;
+  padding: 0.5rem;
+  margin: 0.6rem auto;
+}
+
+.buttonNav:hover {
+  box-shadow: 0 0px 0px 0 white;
+  transform: translateY(-3px);
+  color: #fad964;
+  background-color: #1f9260;
+  border: 1px solid white;
+  box-shadow: 0 2px 8px -1px #fdf972;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrap {
+  background-color: black;
+  width: 100%;
+  height: 10%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-around;
+}

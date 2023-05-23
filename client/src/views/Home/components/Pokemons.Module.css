@@ -1,0 +1,26 @@
+.pokeBox {
+  text-align: center;
+  font-size: 0.75rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.pokeBox:hover {
+  background-color: #0deb09;
+}
+
+.pokeImg {
+  border-radius: 10px;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.linkDetail {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+.linkDetail:hover {
+  color: #000;
+}
