@@ -1,13 +1,18 @@
 import "./Form.Module.css";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addPokemon, getAllTypes, getAllPokemons } from "../../redux/actions";
+import { addPokemon, getAllTypes } from "../../redux/actions";
 import validate from "./validate.js";
 import NavBar from "../components/NavBar";
 
 function Form() {
   const dispatch = useDispatch();
   const types = useSelector((state) => state.allTypes);
+  const pokemons = useSelector((state) =>
+    state.allPokemons.map((pok) => pok.name)
+  );
+  const [type1, setType1] = useState("");
+  const [type2, setType2] = useState("");
   const [errors, setErrors] = useState({});
   const [input, setInput] = useState({
     name: "",
@@ -31,42 +36,25 @@ function Form() {
         .replaceAll(/\s+/g, " "),
     });
     setErrors(
-      validate({
-        ...input,
-        [e.target.name]: e.target.value,
-      })
+      validate(
+        {
+          ...input,
+          [e.target.name]: e.target.value,
+        },
+        pokemons
+      )
     );
   }
-  // function handleChecked(e) {
-  //   if (e.target.checked) {
-  //     setInput({
-  //       ...input,
-  //       types: [...input.types, e.target.value],
-  //     });
-  //     setErrors(
-  //       validate({
-  //         ...input,
-  //         types: [...input.types, e.target.value],
-  //       })
-  //     );
-  //   } else if (!e.target.checked) {
-  //     setInput({
-  //       ...input,
-  //       types: input.types.filter((el) => el !== e.target.value),
-  //     });
-  //     setErrors(
-  //       validate({
-  //         ...input,
-  //         types: input.types.filter((el) => el !== e.target.value),
-  //       })
-  //     );
-  //   }
-  // }
+  function handleSelect1(e) {
+    setType1(e.target.value);
+  }
+  function handleSelect2(e) {
+    setType2(e.target.value);
+  }
   function handleSubmit(e) {
     e.preventDefault();
     if (Object.keys(errors).length === 0 && input.name.length) {
-      dispatch(addPokemon(input));
-      dispatch(getAllPokemons());
+      dispatch(addPokemon({ ...input, types: [type1, type2] }));
       alert("good job pokemon created");
       setInput({
         name: "",
@@ -359,7 +347,8 @@ function Form() {
               <div className="selectsForm">
                 <select
                   className="selectForm"
-                  onChange={(e) => handleChange(e)}
+                  name="types"
+                  onChange={(e) => handleSelect1(e)}
                 >
                   <option value="Types">Types</option>
                   {types.map((type) => {
@@ -372,7 +361,8 @@ function Form() {
                 </select>
                 <select
                   className="selectForm"
-                  onChange={(e) => handleChange(e)}
+                  name="types"
+                  onChange={(e) => handleSelect2(e)}
                 >
                   <option value="Types">Types</option>
                   {types.map((type) => {

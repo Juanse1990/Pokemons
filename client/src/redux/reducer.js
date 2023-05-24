@@ -63,19 +63,17 @@ const reducer = (state = initialState, { type, payload }) => {
       };
     }
     case FILTER_BY_APIDB: {
-      const allPokemons2 = state.allPokemons;
-      const statusFiltered2 =
-        payload === "db"
-          ? allPokemons2.filter((el) => el.createdInDb)
-          : allPokemons2.filter((el) => !el.createdInDb);
+      let statusFiltered2 = state.allPokemons;
+      if (payload == "db") {
+        console.log(statusFiltered2);
+        statusFiltered2 = state.allPokemons.filter((el) => el.createdInDb);
+        console.log(statusFiltered2);
+      } else {
+        statusFiltered2 = state.allPokemons.filter((el) => !el.createdInDb);
+      }
       return {
         ...state,
-        pokemons:
-          payload === "api-db"
-            ? allPokemons2
-            : statusFiltered2.length
-            ? statusFiltered2
-            : ["Pokemons created"],
+        pokemonsOrder: statusFiltered2,
       };
     }
 
