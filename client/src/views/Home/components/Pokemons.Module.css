@@ -3,10 +3,14 @@
   font-size: 0.75rem;
   border-radius: 10px;
   position: relative;
+  background-color: #192b59;
+  border: 2px solid #000;
+  height: 100%;
 }
 
 .pokeBox:hover {
-  background-color: #0deb09;
+  background-color: #fccc0a;
+box-shadow: 0 2px 8px -1px white;
 }
 
 .pokeImg {

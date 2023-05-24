@@ -19,26 +19,28 @@ function Detail() {
       <div>
         <NavBar />
       </div>
-      <div className="detailContainer">
-        <img src={pokemon.img} alt={pokemon.name} className="col pokeImg" />
-        <div className="col pokeDetails">
-          <h2>Name: {pokemon.name}</h2>
-          {pokemon.types && (
-            <>
-              <h2>
-                Type1: {pokemon.types[0] ? pokemon.types[0].name : "null"}
-              </h2>
-              <h2>
-                Type2: {pokemon.types[1] ? pokemon.types[1].name : "null"}
-              </h2>
-            </>
-          )}
-          <h2>Hp: {pokemon.hp}</h2>
-          <h2>Attack: {pokemon.attack}</h2>
-          <h2>Defense: {pokemon.defense}</h2>
-          <h2>Speed: {pokemon.speed}</h2>
-          <h2>Height: {pokemon.height}</h2>
-          <h2>Weight: {pokemon.weight}</h2>
+      <div className="Container">
+        <div className="detailContainer">
+          <img src={pokemon.img} alt={pokemon.name} className="col pokeImg" />
+          <div className="col pokeDetails">
+            <h3>Name: {pokemon.name}</h3>
+            {pokemon.types && (
+              <>
+                <h3>
+                  Type1: {pokemon.types[0] ? pokemon.types[0].name : "null"}
+                </h3>
+                <h3>
+                  Type2: {pokemon.types[1] ? pokemon.types[1].name : "null"}
+                </h3>
+              </>
+            )}
+            <h3>Hp: {pokemon.hp}</h3>
+            <h3>Attack: {pokemon.attack}</h3>
+            <h3>Defense: {pokemon.defense}</h3>
+            <h3>Speed: {pokemon.speed}</h3>
+            <h3>Height: {pokemon.height}</h3>
+            <h3>Weight: {pokemon.weight}</h3>
+          </div>
         </div>
       </div>
     </div>

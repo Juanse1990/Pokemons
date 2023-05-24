@@ -42,7 +42,6 @@ function Home() {
     const nextPage = page + 1;
     const index = nextPage * pokemonsPerPage;
     if (index > totalPokemons) return;
-
     {
       pokemonsOrder
         ? setPokemons([...pokemonsOrder].splice(index, pokemonsPerPage))
@@ -89,14 +88,20 @@ function Home() {
         <Search />
       </div>
       <div className="selects">
-        <select onChange={(event) => handleOrder(event)}>
+        <select
+          className="selectOrder"
+          onChange={(event) => handleOrder(event)}
+        >
           <option value="normal">Normal</option>
           <option value="alfa-asc">A-Z</option>
           <option value="alfa-des">Z-A</option>
           <option value="atta-asc">More Attack</option>
           <option value="atta-des">Less attack</option>
         </select>
-        <select onChange={(event) => handleFilterByType(event)}>
+        <select
+          className="selectOrder"
+          onChange={(event) => handleFilterByType(event)}
+        >
           <option value="Types">Types</option>
           {allTypesI.map((type) => {
             return (
@@ -106,15 +111,22 @@ function Home() {
             );
           })}
         </select>
-        <select onChange={(event) => handleFilterByApiDb(event)}>
+        <select
+          className="selectOrder"
+          onChange={(event) => handleFilterByApiDb(event)}
+        >
           <option value="api-db">API-DB</option>
           <option value="api">API</option>
           <option value="db">DB</option>
         </select>
       </div>
-      <div>
-        <button onClick={prevHandler}>PREV</button>
-        <button onClick={nextHandler}>NEXT</button>
+      <div className="buttons">
+        <button className="buttonOrder" onClick={prevHandler}>
+          PREV
+        </button>
+        <button className="buttonOrder" onClick={nextHandler}>
+          NEXT
+        </button>
       </div>
       {!solo ? (
         <div className="pokeGrid">

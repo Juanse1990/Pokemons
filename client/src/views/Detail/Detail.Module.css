@@ -4,18 +4,30 @@
   height: auto;
 }
 
+.Container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
 .detailContainer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 5rem;
+  width: fit-content;
+  background-color: #192b59;
+  border: 2px solid black;
 }
 
 .firstItem {
   margin-top: 0;
 }
 
-.pokeDetails {
-  font-size: 1rem;
+h3 {
+  margin: 1rem;
+  padding: 0;
+  color: #fccc0a;
 }
 
 .pokeImg {

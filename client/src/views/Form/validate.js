@@ -63,14 +63,6 @@ export default function validate(input, pokemons) {
       errors.height = "The height of the Pokemon must be less than 80";
     }
   }
-
-  if (!input.types.length) {
-    errors.types = "Must choose a pokemon type";
-  }
-  if (input.types.length > 2) {
-    errors.types = `You can't choose more than 2 types per Pokemon`;
-  }
-
   if (!input.img) {
     errors.img = "A image is required copy a url";
   }
