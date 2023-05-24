@@ -4,7 +4,7 @@
   text-align: center;
 }
 
-.create{
+.create {
   cursor: pointer;
   box-shadow: white;
   background: #fccc0a;
@@ -89,5 +89,3 @@
 .selects select:hover {
   box-shadow: 0 2px 8px -1px white;
 }
-
-#3c5c9c
