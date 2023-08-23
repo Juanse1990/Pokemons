@@ -1,3 +1,0 @@
-{
-  "rewrites": [{ "source": "/:any*", "destination": "/" }]
-}
